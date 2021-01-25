@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_24_215403) do
+ActiveRecord::Schema.define(version: 2021_01_25_182726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2021_01_24_215403) do
     t.string "city"
     t.string "country"
     t.integer "likes"
-    t.string "comment"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -35,6 +34,15 @@ ActiveRecord::Schema.define(version: 2021_01_24_215403) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["airport_id"], name: "index_amenities_on_airport_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "airport_id", null: false
+    t.string "author"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["airport_id"], name: "index_comments_on_airport_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -63,6 +71,7 @@ ActiveRecord::Schema.define(version: 2021_01_24_215403) do
   end
 
   add_foreign_key "amenities", "airports"
+  add_foreign_key "comments", "airports"
   add_foreign_key "restaurants", "airports"
   add_foreign_key "stores", "airports"
 end

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  airport: one
+  author: MyString
+  content: MyText
+
+two:
+  airport: two
+  author: MyString
+  content: MyText
