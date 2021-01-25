@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2021_01_24_215403) do
 
   create_table "airports", force: :cascade do |t|
     t.string "name"
-    t.bigint "user_id", null: false
     t.string "city"
     t.string "country"
     t.integer "likes"
@@ -25,7 +24,6 @@ ActiveRecord::Schema.define(version: 2021_01_24_215403) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_airports_on_user_id"
   end
 
   create_table "amenities", force: :cascade do |t|
@@ -64,13 +62,6 @@ ActiveRecord::Schema.define(version: 2021_01_24_215403) do
     t.index ["airport_id"], name: "index_stores_on_airport_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  add_foreign_key "airports", "users"
   add_foreign_key "amenities", "airports"
   add_foreign_key "restaurants", "airports"
   add_foreign_key "stores", "airports"
