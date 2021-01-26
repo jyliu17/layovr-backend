@@ -30,8 +30,8 @@ Airport.create(name: "Tokyo-Narita International", code: "NRT", city: "Tokyo", c
 Amenity.create(airport_id: 1, name: "Water Fountain", service: "Water Fountain", likes: 0, image: "https://static.thenounproject.com/png/29-200.png")
 Amenity.create(airport_id: 1, name: "Prayer Room", service: "Prayer Room", likes: 0, image: "https://cdn3.iconfinder.com/data/icons/accomodation-outline/59/008_-_Prayer_Room-512.png")
 
-Restaurant.create(airport_id: 1, name: "McDonalds", cost: "$", cuisine: "American", likes: 0, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1170px-McDonald%27s_Golden_Arches.svg.png")
-Restaurant.create(airport_id: 1, name: "Starbucks", cost: "$", cuisine: "Coffee", likes: 0, image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png")
+Restaurant.create(airport_id: 1, name: "McDonalds", cost: "$", cuisine: "American", typeof: "Fastfood", likes: 0, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1170px-McDonald%27s_Golden_Arches.svg.png")
+Restaurant.create(airport_id: 1, name: "Starbucks", cost: "$", cuisine: "Coffee", typeof: "Fastfood", likes: 0, image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png")
 
 Store.create(airport_id: 1, name: "Boots", cost: "$", category: "Drugstore", likes: 0, image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Boots_logo.svg/1200px-Boots_logo.svg.png")
 Store.create(airport_id: 1, name: "Sunglasses Hut", cost: "$$$", category: "Apparel", likes: 0, image: "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0002/3105/brand.gif?itok=fZZt-IgB")

@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_170421) do
     t.string "name"
     t.string "cost"
     t.string "cuisine"
-    t.string "type"
+    t.string "typeof"
     t.integer "likes"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false

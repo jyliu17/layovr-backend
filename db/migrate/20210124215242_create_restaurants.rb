@@ -5,7 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :cost
       t.string :cuisine
-      t.string :type
+      t.string :typeof
       t.integer :likes
       t.string :image
     
