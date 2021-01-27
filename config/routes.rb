@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :airport_amenities, only: [:index, :show]
   resources :comments, only: [:index, :show, :update, :create, :destroy]
   resources :stores, only: [:index, :show, :update]
   resources :restaurants, only: [:index, :show, :update]

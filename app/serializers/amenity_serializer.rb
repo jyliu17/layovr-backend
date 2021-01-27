@@ -1,4 +1,3 @@
 class AmenitySerializer < ActiveModel::Serializer
-    attributes :id, :name, :service, :likes, :image
-    has_one :airport
+    attributes :id, :name, :service, :likes, :image, :airport_amenities
 end

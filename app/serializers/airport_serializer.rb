@@ -1,4 +1,4 @@
 class AirportSerializer < ActiveModel::Serializer
 
-    attributes :id, :name, :code, :city, :country, :likes, :image, :amenities, :restaurants, :stores, :comments
+    attributes :id, :name, :code, :city, :country, :likes, :image, :restaurants, :stores, :comments, :airport_amenities
 end

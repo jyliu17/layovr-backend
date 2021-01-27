@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_26_170421) do
+ActiveRecord::Schema.define(version: 2021_01_27_165136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "airport_amenities", force: :cascade do |t|
+    t.bigint "airport_id", null: false
+    t.bigint "amenity_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["airport_id"], name: "index_airport_amenities_on_airport_id"
+    t.index ["amenity_id"], name: "index_airport_amenities_on_amenity_id"
+  end
 
   create_table "airports", force: :cascade do |t|
     t.string "name"
@@ -27,14 +36,12 @@ ActiveRecord::Schema.define(version: 2021_01_26_170421) do
   end
 
   create_table "amenities", force: :cascade do |t|
-    t.bigint "airport_id", null: false
     t.string "name"
     t.string "service"
     t.integer "likes"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["airport_id"], name: "index_amenities_on_airport_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -62,8 +69,8 @@ ActiveRecord::Schema.define(version: 2021_01_26_170421) do
   create_table "stores", force: :cascade do |t|
     t.bigint "airport_id", null: false
     t.string "name"
-    t.string "cost"
-    t.string "category"
+    t
+      t.string "category"
     t.integer "likes"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
@@ -71,7 +78,8 @@ ActiveRecord::Schema.define(version: 2021_01_26_170421) do
     t.index ["airport_id"], name: "index_stores_on_airport_id"
   end
 
-  add_foreign_key "amenities", "airports"
+  add_foreign_key "airport_amenities", "airports"
+  add_foreign_key "airport_amenities", "amenities"
   add_foreign_key "comments", "airports"
   add_foreign_key "restaurants", "airports"
   add_foreign_key "stores", "airports"

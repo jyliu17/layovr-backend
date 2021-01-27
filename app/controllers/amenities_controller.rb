@@ -30,7 +30,7 @@ class AmenitiesController < ApplicationController
         
 private
     def amenity_params
-        params.permit(:name, :service, :image, :likes, :airport_id)
+        params.permit(:name, :service, :image, :likes, :airport_amenities)
     end
 
 end

@@ -1,3 +1,4 @@
 class Amenity < ApplicationRecord
-  belongs_to :airport
+  has_many :airport_amenities
+  has_many :airports, through: :airport_amenities
 end

@@ -30,7 +30,7 @@ class AirportsController < ApplicationController
         
 private
     def airport_params
-        params.permit(:name, :code, :city, :country, :image, :likes)
+        params.permit(:name, :code, :city, :country, :image, :likes, :airport_amenities)
     end
 
     
