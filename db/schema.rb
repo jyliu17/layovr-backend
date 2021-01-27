@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(version: 2021_01_27_165136) do
   create_table "stores", force: :cascade do |t|
     t.bigint "airport_id", null: false
     t.string "name"
-    t
-      t.string "category"
+    t.string "cost"
+    t.string "category"
     t.integer "likes"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
