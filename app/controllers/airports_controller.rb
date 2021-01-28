@@ -20,12 +20,6 @@ class AirportsController < ApplicationController
         @airport.update(airport_params)
         render json: @airport
     end 
-
-    # def destroy
-    #     @airport = Airport.find(params[:id])
-    #     @airport.destroy
-    #     render json: @airport 
-    # end 
     
         
 private
