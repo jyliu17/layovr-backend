@@ -29,7 +29,7 @@ class StoresController < ApplicationController
     
 private
     def store_params
-        params.permit(:name, :image, :cost, :category, :likes)
+        params.permit(:name, :image, :cost, :category, :likes, :airport_id)
     end
 
 end

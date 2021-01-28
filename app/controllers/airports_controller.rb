@@ -20,17 +20,11 @@ class AirportsController < ApplicationController
         @airport.update(airport_params)
         render json: @airport
     end 
-
-    # def destroy
-    #     @airport = Airport.find(params[:id])
-    #     @airport.destroy
-    #     render json: @airport 
-    # end 
     
         
 private
     def airport_params
-        params.permit(:name, :city, :country, :image, :likes, :comment)
+        params.permit(:name, :code, :city, :country, :image, :likes, :airport_amenities)
     end
 
     

@@ -10,33 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_24_215403) do
+ActiveRecord::Schema.define(version: 2021_01_27_165136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "airport_amenities", force: :cascade do |t|
+    t.bigint "airport_id", null: false
+    t.bigint "amenity_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["airport_id"], name: "index_airport_amenities_on_airport_id"
+    t.index ["amenity_id"], name: "index_airport_amenities_on_amenity_id"
+  end
+
   create_table "airports", force: :cascade do |t|
     t.string "name"
-    t.bigint "user_id", null: false
     t.string "city"
     t.string "country"
     t.integer "likes"
-    t.string "comment"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_airports_on_user_id"
+    t.string "code"
   end
 
   create_table "amenities", force: :cascade do |t|
-    t.bigint "airport_id", null: false
     t.string "name"
     t.string "service"
     t.integer "likes"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["airport_id"], name: "index_amenities_on_airport_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "airport_id", null: false
+    t.string "author"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["airport_id"], name: "index_comments_on_airport_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -44,7 +58,7 @@ ActiveRecord::Schema.define(version: 2021_01_24_215403) do
     t.string "name"
     t.string "cost"
     t.string "cuisine"
-    t.string "type"
+    t.string "typeof"
     t.integer "likes"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
@@ -64,14 +78,9 @@ ActiveRecord::Schema.define(version: 2021_01_24_215403) do
     t.index ["airport_id"], name: "index_stores_on_airport_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  add_foreign_key "airports", "users"
-  add_foreign_key "amenities", "airports"
+  add_foreign_key "airport_amenities", "airports"
+  add_foreign_key "airport_amenities", "amenities"
+  add_foreign_key "comments", "airports"
   add_foreign_key "restaurants", "airports"
   add_foreign_key "stores", "airports"
 end
