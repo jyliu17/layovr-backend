@@ -21,17 +21,17 @@ Airport.create(name: "Bangkok Suvarnabhumi", code: "BKK", city: "Bangkok", count
 Airport.create(name: "Cancun International", code: "CUN", city: "Cancun", country: "Mexico",likes: 0, image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/c7/d1/39/club-med-cancun-yucatan.jpg?w=900&h=-1&s=1")
 Airport.create(name: "Toronto Pearson International", code: "YYZ", city: "Toronto", country: "Canada",likes: 0, image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/10/2f/e4/toronto.jpg?w=1100&h=600&s=1")
 
-
 Amenity.create(name: "Free WiFi", service: "Internet", likes: 0, image: "https://image.shutterstock.com/image-vector/wifi-icon-black-wi-fi-260nw-654893110.jpg")
 Amenity.create(name: "Water Fountain", service: "Water Fountain", likes: 0, image: "https://static.thenounproject.com/png/29-200.png")
 Amenity.create(name: "Prayer Room", service: "Prayer Room", likes: 0, image: "https://cdn3.iconfinder.com/data/icons/accomodation-outline/59/008_-_Prayer_Room-512.png")
 Amenity.create(name: "Massage Chairs", service: "Massage Chairs", likes: 0, image: "https://cdn2.vectorstock.com/i/1000x1000/93/51/massage-chair-icon-on-white-background-vector-18149351.jpg")
-Amenity.create(name: "Gender Neutral Bathrooms", service: "Bathrooms", likes: 0, image: "https://static.thenounproject.com/png/13777-200.png")
+Amenity.create(name: "Gender Neutral", service: "Bathrooms", likes: 0, image: "https://static.thenounproject.com/png/13777-200.png")
 Amenity.create(name: "Therapy Dogs", service: "Pets", likes: 0, image: "https://static.thenounproject.com/png/61386-200.png")
 Amenity.create(name: "Currency Exchange", service: "Finance", likes: 0, image: "https://image.flaticon.com/icons/png/512/71/71123.png")
 Amenity.create(name: "Smoking Room", service: "Smoking", likes: 0, image: "https://cdn4.iconfinder.com/data/icons/car-services-36-icons/110/Car_servicess-32-512.png")
 Amenity.create(name: "Outlets", service: "Electronics", likes: 0, image: "https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/125-512.png")
 Amenity.create(name: "Trolleys", service: "Baggage Services", likes: 0, image: "https://static.thenounproject.com/png/1138102-200.png")
+
 
 AirportAmenity.create(airport_id: 1, amenity_id: 1)
 AirportAmenity.create(airport_id: 1, amenity_id: 2)
@@ -41,8 +41,50 @@ AirportAmenity.create(airport_id: 1, amenity_id: 8)
 AirportAmenity.create(airport_id: 1, amenity_id: 9)
 AirportAmenity.create(airport_id: 1, amenity_id: 10)
 
+
 AirportAmenity.create(airport_id: 2, amenity_id: 1)
 AirportAmenity.create(airport_id: 2, amenity_id: 2)
+AirportAmenity.create(airport_id: 2, amenity_id: 3)
+AirportAmenity.create(airport_id: 2, amenity_id: 4)
+AirportAmenity.create(airport_id: 2, amenity_id: 5)
+AirportAmenity.create(airport_id: 2, amenity_id: 7)
+AirportAmenity.create(airport_id: 2, amenity_id: 9)
+
+AirportAmenity.create(airport_id: 3, amenity_id: 1)
+AirportAmenity.create(airport_id: 3, amenity_id: 2)
+AirportAmenity.create(airport_id: 3, amenity_id: 4)
+AirportAmenity.create(airport_id: 3, amenity_id: 5)
+AirportAmenity.create(airport_id: 3, amenity_id: 6)
+AirportAmenity.create(airport_id: 3, amenity_id: 9)
+
+AirportAmenity.create(airport_id: 4, amenity_id: 1)
+AirportAmenity.create(airport_id: 4, amenity_id: 2)
+AirportAmenity.create(airport_id: 4, amenity_id: 3)
+AirportAmenity.create(airport_id: 4, amenity_id: 4)
+AirportAmenity.create(airport_id: 4, amenity_id: 5)
+AirportAmenity.create(airport_id: 4, amenity_id: 7)
+AirportAmenity.create(airport_id: 4, amenity_id: 9)
+
+AirportAmenity.create(airport_id: 5, amenity_id: 1)
+AirportAmenity.create(airport_id: 5, amenity_id: 2)
+AirportAmenity.create(airport_id: 5, amenity_id: 4)
+AirportAmenity.create(airport_id: 5, amenity_id: 5)
+AirportAmenity.create(airport_id: 5, amenity_id: 6)
+AirportAmenity.create(airport_id: 5, amenity_id: 9)
+
+AirportAmenity.create(airport_id: 6, amenity_id: 1)
+AirportAmenity.create(airport_id: 6, amenity_id: 2)
+AirportAmenity.create(airport_id: 6, amenity_id: 4)
+AirportAmenity.create(airport_id: 6, amenity_id: 5)
+AirportAmenity.create(airport_id: 6, amenity_id: 7)
+AirportAmenity.create(airport_id: 6, amenity_id: 9)
+
+AirportAmenity.create(airport_id: 7, amenity_id: 1)
+AirportAmenity.create(airport_id: 7, amenity_id: 2)
+AirportAmenity.create(airport_id: 7, amenity_id: 4)
+AirportAmenity.create(airport_id: 7, amenity_id: 5)
+AirportAmenity.create(airport_id: 7, amenity_id: 7)
+AirportAmenity.create(airport_id: 7, amenity_id: 9)
 
 
 Restaurant.create(airport_id: 1, name: "McDonalds", cost: "$", cuisine: "American", typeof: "Fastfood", likes: 0, image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1170px-McDonald%27s_Golden_Arches.svg.png")
@@ -62,6 +104,9 @@ Restaurant.create(airport_id: 13, name: "Pret A Manger", cost: "$", cuisine: "Sa
 Store.create(airport_id: 1, name: "Boots", cost: "$", category: "Drugstore", likes: 0, image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Boots_logo.svg/1200px-Boots_logo.svg.png")
 Store.create(airport_id: 1, name: "Sunglasses Hut", cost: "$$$", category: "Apparel", likes: 0, image: "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0002/3105/brand.gif?itok=fZZt-IgB")
 Store.create(airport_id: 1, name: "World of Whiskies", cost: "$$", category: "Alcohol", likes: 0, image: "https://cdn.technologynetworks.com/tn/images/thumbs/jpeg/640_360/whiskey-the-target-of-fraud-327900.jpg?v=10560096")
+Store.create(airport_id: 6, name: "Blue Lagoon", cost: "$$", category: "Cosmetics", likes: 0, image: "https://images.ctfassets.net/w65k7w0nsb8q/2wTQxbFJiuFmUCktZeNgWH/b59d2cfb7fec7bed46f42094fe133d41/SPA-1.jpg")
+Store.create(airport_id: 6, name: "Duty Free Iceland", cost: "$", category: "Souvenir", likes: 0, image: "https://www.businessdestinations.com/wp-content/uploads/2014/11/Keflavik-Duty-Free.jpg")
+Store.create(airport_id: 6, name: "66° NORTH", cost: "$$", category: "Apparel", likes: 0, image: "https://www.travelociraptor.com/wp-content/uploads/2018/02/airport11.jpg")
 
 
 # restaurants
