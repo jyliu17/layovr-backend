@@ -151,12 +151,28 @@ Restaurant.create(airport_id: 11, name: "Miso Kitchen", cost: "$$", cuisine: "Ja
 
 Restaurant.create(airport_id: 11, name: "T's Tantan", cost: "$$", cuisine: "Japanese", typeof: "Eat-in", likes: 0, image: "https://www.narita-airport.jp/img/original/24301")
 
+Restaurant.create(airport_id: 1, name: "Yo Sushi", cost: "$$", cuisine: "Japanese", typeof: "Fast Casual", likes: 0, image: "https://res.cloudinary.com/westfielddg/image/upload/westfield-media/uk/retailer/logos/djqmk0pfgn1x3rkpsx0h.png")
+
 Restaurant.create(airport_id: 2, name: "Evergreen's", cost: "$", cuisine: "American", typeof: "Fast Casual", likes: 0, image: "https://ubb8m2c7z7g1ei2ee1isdrqd-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Evergreens-Transparent.svg")
+Restaurant.create(airport_id: 2, name: "Poke to the Max", cost: "$$", cuisine: "Hawaiian", typeof: "Fast Casual", likes: 0, image: "https://ubb8m2c7z7g1ei2ee1isdrqd-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/Poke-to-the-Max-logo.svg")
+Restaurant.create(airport_id: 2, name: "La Pisa Cafe", cost: "$$", cuisine: "Italian", typeof: "Fast Casual", likes: 0, image: "https://ubb8m2c7z7g1ei2ee1isdrqd-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/La-Pisa-LOGO4c.svg")
+Restaurant.create(airport_id: 2, name: "Hachi-ko", cost: "$$", cuisine: "Japanese", typeof: "Fast Casual", likes: 0, image: "https://ubb8m2c7z7g1ei2ee1isdrqd-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Hachi-ko-LOGO-4cH.svg")
+Restaurant.create(airport_id: 2, name: "Capitol Hill Food Hall", cost: "$$", cuisine: "Seafood", typeof: "Fast Casual", likes: 0, image: "https://ubb8m2c7z7g1ei2ee1isdrqd-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/CapitolHillLogo_Seal.svg")
 
 Restaurant.create(airport_id: 3, name: "Beerhive", cost: "$$", cuisine: "American", typeof: "Bar", likes: 0, image: "https://i1.wp.com/doctorale.com/wp-content/uploads/2016/01/Duvel-glass.jpg")
 Restaurant.create(airport_id: 16, name: "Beerhive", cost: "$$", cuisine: "American", typeof: "Bar", likes: 0, image: "https://i1.wp.com/doctorale.com/wp-content/uploads/2016/01/Duvel-glass.jpg")
 Restaurant.create(airport_id: 5, name: "Beerhive", cost: "$$", cuisine: "American", typeof: "Bar", likes: 0, image: "https://i1.wp.com/doctorale.com/wp-content/uploads/2016/01/Duvel-glass.jpg")
 Restaurant.create(airport_id: 7, name: "Beerhive", cost: "$$", cuisine: "American", typeof: "Bar", likes: 0, image: "https://i1.wp.com/doctorale.com/wp-content/uploads/2016/01/Duvel-glass.jpg")
+
+Restaurant.create(airport_id: 9, name: "Yung Kee", cost: "$$$", cuisine: "Cantonese", typeof: "Eat-in", likes: 0, image: "https://www.hongkongairport.com/iwov-resources/image/shop-dine/dining/yung-kee-logo.png")
+Restaurant.create(airport_id: 9, name: "KaravanStop", cost: "$", cuisine: "Coffee", typeof: "Fastfood", likes: 0, image: "https://www.hongkongairport.com/iwov-resources/image/shop-dine/dining/karavanstop-logo.jpg")
+Restaurant.create(airport_id: 9, name: "Moon Thai Express", cost: "$", cuisine: "Thai", typeof: "Fast casual", likes: 0, image: "https://www.hongkongairport.com/iwov-resources/image/shop-dine/dining/moon-thai-logo.png")
+Restaurant.create(airport_id: 9, name: "Crystal Jade", cost: "$$$", cuisine: "Shanghainese", typeof: "Eat-in", likes: 0, image: "https://www.hongkongairport.com/iwov-resources/image/shop-dine/dining/crystal-jade-logo.png")
+Restaurant.create(airport_id: 9, name: "Caviar House", cost: "$$$", cuisine: "French", typeof: "Eat-in", likes: 0, image: "https://www.hongkongairport.com/iwov-resources/image/shop-dine/dining/caviar-logo.png")
+Restaurant.create(airport_id: 1, name: "Caviar House", cost: "$$$", cuisine: "French", typeof: "Eat-in", likes: 0, image: "https://www.hongkongairport.com/iwov-resources/image/shop-dine/dining/caviar-logo.png")
+Restaurant.create(airport_id: 4, name: "Caviar House", cost: "$$$", cuisine: "French", typeof: "Eat-in", likes: 0, image: "https://www.hongkongairport.com/iwov-resources/image/shop-dine/dining/caviar-logo.png")
+Restaurant.create(airport_id: 6, name: "Caviar House", cost: "$$$", cuisine: "French", typeof: "Eat-in", likes: 0, image: "https://www.hongkongairport.com/iwov-resources/image/shop-dine/dining/caviar-logo.png")
+
 
 Restaurant.create(airport_id: 10, name: "Pinkberry", cost: "$", cuisine: "Frozen Yogurt", typeof: "Takeaway", likes: 0, image: "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_auto,h_168,c_pad,fl_lossy,f_auto/alcjt2boklkmcsw0scmj")
 Restaurant.create(airport_id: 12, name: "Pinkberry", cost: "$", cuisine: "Frozen Yogurt", typeof: "Takeaway", likes: 0, image: "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_auto,h_168,c_pad,fl_lossy,f_auto/alcjt2boklkmcsw0scmj")
